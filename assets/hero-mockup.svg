@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" viewBox="0 0 560 420">
+  <defs>
+    <linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#19c2ff"/></linearGradient>
+    <linearGradient id="br" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#19c2ff"/><stop offset="1" stop-color="#ff5c97"/></linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000" flood-opacity="0.45"/></filter>
+  </defs>
+  <!-- browser window -->
+  <g filter="url(#sh)">
+    <rect x="40" y="60" width="380" height="280" rx="18" fill="#0c0e18" stroke="rgba(255,255,255,0.1)"/>
+    <rect x="40" y="60" width="380" height="44" rx="18" fill="#141726"/>
+    <circle cx="66" cy="82" r="6" fill="#ff5f57"/><circle cx="86" cy="82" r="6" fill="#febc2e"/><circle cx="106" cy="82" r="6" fill="#28c840"/>
+    <rect x="150" y="74" width="240" height="16" rx="8" fill="rgba(255,255,255,0.08)"/>
+    <rect x="70" y="130" width="200" height="20" rx="10" fill="url(#br)"/>
+    <rect x="70" y="166" width="320" height="12" rx="6" fill="rgba(255,255,255,0.18)"/>
+    <rect x="70" y="188" width="290" height="12" rx="6" fill="rgba(255,255,255,0.12)"/>
+    <rect x="70" y="226" width="140" height="80" rx="12" fill="rgba(124,92,255,0.25)"/>
+    <rect x="230" y="226" width="140" height="80" rx="12" fill="rgba(25,194,255,0.22)"/>
+  </g>
+  <!-- phone overlapping -->
+  <g filter="url(#sh)">
+    <rect x="360" y="120" width="170" height="280" rx="30" fill="#0c0e18" stroke="rgba(255,255,255,0.12)"/>
+    <rect x="372" y="132" width="146" height="256" rx="22" fill="#10131f"/>
+    <rect x="430" y="142" width="30" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
+    <rect x="392" y="168" width="106" height="60" rx="14" fill="url(#ph)"/>
+    <rect x="392" y="244" width="78" height="12" rx="6" fill="rgba(255,255,255,0.4)"/>
+    <rect x="392" y="266" width="106" height="10" rx="5" fill="rgba(255,255,255,0.18)"/>
+    <rect x="392" y="296" width="106" height="40" rx="12" fill="rgba(255,255,255,0.1)"/>
+    <rect x="392" y="348" width="106" height="26" rx="13" fill="url(#br)"/>
+  </g>
+</svg>

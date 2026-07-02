@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06070d"/>
+      <stop offset="1" stop-color="#0d0f1e"/>
+    </linearGradient>
+    <linearGradient id="grd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="0.5" stop-color="#19c2ff"/>
+      <stop offset="1" stop-color="#ff5c97"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="40" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- ambient blobs -->
+  <circle cx="200" cy="150" r="280" fill="#5b3cff" opacity="0.18" filter="url(#glow)"/>
+  <circle cx="1050" cy="480" r="260" fill="#0aa6ff" opacity="0.16" filter="url(#glow)"/>
+  <circle cx="700" cy="350" r="200" fill="#ff3d7f" opacity="0.1" filter="url(#glow)"/>
+  <!-- grid lines -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105"/><line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/><line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="200" y1="0" x2="200" y2="630"/><line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/><line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+  <!-- gradient accent bar -->
+  <rect x="80" y="200" width="120" height="6" rx="3" fill="url(#grd)"/>
+  <!-- studio name -->
+  <text x="80" y="320" font-family="Georgia, serif" font-size="96" font-weight="700" fill="white" opacity="0.95" letter-spacing="-2">Splec</text>
+  <text x="82" y="380" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="rgba(255,255,255,0.5)" letter-spacing="8">DEVELOPERS</text>
+  <!-- tagline -->
+  <text x="80" y="460" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.7)">Android Apps · Chrome Extensions · Web Apps</text>
+  <!-- right side cards -->
+  <rect x="820" y="140" width="300" height="160" rx="18" fill="rgba(124,92,255,0.18)" stroke="rgba(124,92,255,0.4)" stroke-width="1.5"/>
+  <rect x="820" y="320" width="300" height="160" rx="18" fill="rgba(25,194,255,0.15)" stroke="rgba(25,194,255,0.35)" stroke-width="1.5"/>
+  <text x="860" y="220" font-family="Arial" font-size="32">📱</text>
+  <text x="906" y="210" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="white">Android Apps</text>
+  <text x="906" y="234" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)">Native · Material Design</text>
+  <text x="860" y="400" font-family="Arial" font-size="32">🧩</text>
+  <text x="906" y="390" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="white">Chrome Extensions</text>
+  <text x="906" y="414" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)">Manifest V3 · Productivity</text>
+  <!-- domain -->
+  <text x="80" y="560" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.3)" letter-spacing="2">splecdevelopers.com</text>
+</svg>

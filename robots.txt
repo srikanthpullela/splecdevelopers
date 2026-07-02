@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://splecdevelopers.com/sitemap.xml

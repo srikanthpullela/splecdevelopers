@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Product — Splec Developers</title>
+  <meta name="description" id="pageDesc" content="A product by Splec Developers." />
+  <link rel="canonical" id="pageCanonical" href="https://splecdevelopers.com/products/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Splec Developers" />
+  <meta property="og:title" id="ogTitle" content="Product — Splec Developers" />
+  <meta property="og:description" id="ogDesc" content="A product by Splec Developers." />
+  <meta name="theme-color" content="#06070d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* ── Product page overrides ── */
+    .product-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 5vw 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 64px;
+    }
+    .product-hero-left { flex: 1; min-width: 0; }
+    .product-hero-right {
+      flex: 0 0 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-hero-right img {
+      width: 320px;
+      height: 256px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+    }
+    .product-hero-right .no-thumb {
+      width: 320px; height: 256px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 72px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-dim);
+      font-size: 14px;
+      margin-bottom: 32px;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--text); }
+    .product-cat-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: rgba(124,92,255,0.15);
+      border: 1px solid rgba(124,92,255,0.3);
+      color: var(--accent-2);
+      margin-bottom: 20px;
+    }
+    .product-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .product-tagline {
+      font-size: 18px;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .product-dl-count {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: "Space Grotesk", sans-serif;
+      color: rgba(124,92,255,0.9);
+      background: rgba(124,92,255,0.1);
+      border: 1px solid rgba(124,92,255,0.25);
+      border-radius: 20px;
+      padding: 5px 14px;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+    .product-desc {
+      font-size: 16px;
+      color: var(--text-dim);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .product-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+    .product-cta-group { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .btn-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 600;
+      background: var(--grad);
+      color: #fff;
+      text-decoration: none;
+      transition: opacity .2s, transform .2s;
+      cursor: pointer;
+    }
+    .btn-store:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-store-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--text);
+      background: transparent;
+      text-decoration: none;
+      transition: border-color .2s, transform .2s;
+    }
+    .btn-store-ghost:hover { border-color: rgba(255,255,255,0.35); transform: translateY(-1px); }
+    .dl-group { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 0; }
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text);
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+    }
+    .dl-btn:hover { background: rgba(255,255,255,0.12); transform: translateY(-1px); }
+
+    /* ── Features section ── */
+    .features-section {
+      padding: 80px 5vw 100px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .features-section h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      margin-bottom: 48px;
+      color: var(--text);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px;
+      transition: border-color .2s, transform .25s;
+    }
+    .feature-card:hover { border-color: rgba(124,92,255,0.3); transform: translateY(-3px); }
+    .feature-icon { font-size: 28px; margin-bottom: 14px; }
+    .feature-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .feature-desc { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+
+    /* ── Footer strip ── */
+    .product-footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 5vw;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .product-footer .brand { font-family: "Dancing Script", cursive; font-size: 26px; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .product-footer p { font-size: 13px; color: var(--text-dim); }
+
+    /* ── Not found ── */
+    .not-found {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      text-align: center;
+      padding: 40px;
+    }
+    .not-found h1 { font-family: "Space Grotesk", sans-serif; font-size: 48px; }
+    .not-found p { color: var(--text-dim); font-size: 16px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .product-hero { flex-direction: column; padding-top: 100px; gap: 40px; }
+      .product-hero-right { display: none; }
+      .product-footer { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-aurora" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <a href="/" class="brand" aria-label="Splec Developers home">
+      <span class="brand-stack">
+        <span class="bw-script">Splec</span>
+        <span class="bw-sub">Developers</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="/#home" class="nav-link">Home</a>
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/#capabilities" class="nav-link">What we do</a>
+      <a href="/#products" class="nav-link active">Products</a>
+      <a href="/#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="/#products" class="btn btn-nav magnetic">All products</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="main"></main>
+
+  <script src="../js/products.js"></script>
+  <script>
+    const appleSVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>';
+    const windowsSVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449 9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>';
+    const chromeSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>';
+
+    function osIcon(os) {
+      if (os === 'mac') return appleSVG;
+      if (os === 'windows') return windowsSVG;
+      return '';
+    }
+
+    function fmtCount(n) {
+      if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k+';
+      return n + '+';
+    }
+
+    async function loadGithubCount(p) {
+      if (!p.githubRepo || !p.downloadSeed) return;
+      try {
+        const res = await fetch(`https://api.github.com/repos/${p.githubRepo}/releases`, { cache: 'no-store' });
+        if (!res.ok) return;
+        const releases = await res.json();
+        const total = releases.reduce((sum, r) =>
+          sum + r.assets.reduce((s, a) => s + (a.download_count || 0), 0), 0);
+        const el = document.getElementById('page-dl-count');
+        if (el) el.textContent = '⬇ ' + fmtCount((p.downloadSeed || 0) + total) + ' downloads';
+      } catch (_) {}
+    }
+
+    function renderPage(p) {
+      const cat = { android: 'Android App', ios: 'iOS App', extension: 'Chrome Extension', web: 'Web App', desktop: 'Desktop App', app: 'App' };
+      const appCat = { android: 'MobileApplication', ios: 'MobileApplication', extension: 'WebApplication', web: 'WebApplication', desktop: 'DesktopApplication' };
+
+      // Update meta tags
+      document.title = `${p.name} — Splec Developers`;
+      document.getElementById('pageDesc').setAttribute('content', p.tagline ? `${p.tagline}. ${p.description}` : p.description);
+      document.getElementById('ogTitle').setAttribute('content', `${p.name} — Splec Developers`);
+      document.getElementById('ogDesc').setAttribute('content', p.tagline || p.description);
+      document.getElementById('pageCanonical').setAttribute('href', `https://splecdevelopers.com/products/?p=${p.slug}`);
+
+      // Inject JSON-LD structured data for Google
+      const featureList = (p.features || []).map(f => f.title).join(', ');
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": appCat[p.category] || "SoftwareApplication",
+        "name": p.name,
+        "description": p.description,
+        "applicationCategory": cat[p.category] || "Application",
+        "operatingSystem": p.category === 'ios' ? 'iOS' : p.category === 'android' ? 'Android' : p.category === 'desktop' ? 'macOS, Windows' : 'Any',
+        "author": { "@type": "Organization", "name": "Splec Developers", "url": "https://splecdevelopers.com" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": featureList,
+        ...(p.link && p.link !== '#' ? { "url": p.link } : {})
+      };
+      const ldScript = document.createElement('script');
+      ldScript.type = 'application/ld+json';
+      ldScript.textContent = JSON.stringify(jsonLd, null, 2);
+      document.head.appendChild(ldScript);
+
+      // Build CTA
+      let ctaHTML = '';
+      if (Array.isArray(p.downloads) && p.downloads.length) {
+        const dlBtns = p.downloads.map(d =>
+          d.url
+            ? `<a class="dl-btn" href="${d.url}" ${d.external ? 'target="_blank" rel="noopener"' : `download="${d.file || ''}"`}>${osIcon(d.os)} ${d.label}</a>`
+            : `<span class="dl-btn" style="opacity:.5;cursor:default">${osIcon(d.os)} ${d.label} (soon)</span>`
+        ).join('');
+        ctaHTML = `<div class="dl-group">${dlBtns}</div>`;
+      } else if (p.link && p.link !== '#') {
+        const label = p.storeLabel || 'View Product';
+        ctaHTML = `<a class="btn-store" href="${p.link}" target="_blank" rel="noopener">${p.category === 'extension' ? chromeSVG : ''} ${label}</a>`;
+      }
+
+      // Features
+      const featuresHTML = (p.features && p.features.length)
+        ? `<section class="features-section">
+            <h2>What it does</h2>
+            <div class="features-grid">
+              ${p.features.map(f => `
+                <div class="feature-card">
+                  <div class="feature-icon">${f.icon}</div>
+                  <div class="feature-title">${f.title}</div>
+                  <p class="feature-desc">${f.desc}</p>
+                </div>`).join('')}
+            </div>
+          </section>`
+        : '';
+
+      // Thumb
+      const thumbHTML = p.image
+        ? `<img src="../${p.image}" alt="${p.name} preview" />`
+        : `<div class="no-thumb">${p.icon || '📦'}</div>`;
+
+      document.getElementById('main').innerHTML = `
+        <div class="product-hero">
+          <div class="product-hero-left">
+            <a href="/#products" class="back-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              All products
+            </a>
+            <div class="product-cat-badge">${cat[p.category] || 'Product'}</div>
+            <h1 class="product-title">${p.name}</h1>
+            <p class="product-tagline">${p.tagline || ''}</p>
+            ${p.downloadSeed ? `<p id="page-dl-count" class="product-dl-count">⬇ ${fmtCount(p.downloadSeed)} downloads</p>` : ''}
+            <p class="product-desc">${p.description || ''}</p>
+            <div class="product-tags">${(p.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+            <div class="product-cta-group">
+              ${ctaHTML}
+              <a class="btn-store-ghost" href="/#products">← See all products</a>
+            </div>
+          </div>
+          <div class="product-hero-right">${thumbHTML}</div>
+        </div>
+        ${featuresHTML}
+        <footer class="product-footer">
+          <span class="brand">Splec</span>
+          <p>Built with care by <a href="/" style="color:var(--accent-2)">Splec Developers</a></p>
+          <a href="/#contact" style="color:var(--text-dim);font-size:13px">Get in touch →</a>
+        </footer>`;
+
+      // Load live GitHub download count (non-blocking)
+      loadGithubCount(p);
+    }
+
+    function renderNotFound() {
+      document.getElementById('main').innerHTML = `
+        <div class="not-found">
+          <h1>404</h1>
+          <p>Product not found.</p>
+          <a href="/#products" class="btn btn-nav" style="margin-top:8px">← Back to products</a>
+        </div>`;
+    }
+
+    // Read ?p=slug from URL
+    const slug = new URLSearchParams(window.location.search).get('p');
+    const product = PRODUCTS.find(p => p.slug === slug);
+    if (product) renderPage(product);
+    else renderNotFound();
+
+    // Minimal navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu
+    document.getElementById('menuToggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.nav-links');
+      const open = nav.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
