@@ -237,9 +237,9 @@ const PRODUCTS = [
       { icon: "⚙️", title: "Simple Setup", desc: "Install, connect your calendar, and forget it. Hush handles everything automatically from that point on." }
     ],
     downloads: [
-      { os: "mac", label: "Mac (Apple Silicon)", url: "https://github.com/srikanthpullela/hush-app/releases/latest/download/Hush_1.0.5_aarch64.dmg", file: "Hush-AppleSilicon.dmg", external: true },
-      { os: "mac", label: "Mac (Intel)", url: "https://github.com/srikanthpullela/hush-app/releases/latest/download/Hush_1.0.5_x64.dmg", file: "Hush-Intel.dmg", external: true },
-      { os: "windows", label: "Windows", url: "https://github.com/srikanthpullela/hush-app/releases/latest/download/Hush_1.0.5_x64-setup.exe", file: "Hush-Setup.exe", external: true }
+      { os: "mac", label: "Mac (Apple Silicon)", url: "https://github.com/srikanthpullela/hush-app/releases/latest/download/Hush-mac-apple-silicon.dmg", file: "Hush-AppleSilicon.dmg", external: true },
+      { os: "mac", label: "Mac (Intel)", url: "https://github.com/srikanthpullela/hush-app/releases/latest/download/Hush-mac-intel.dmg", file: "Hush-Intel.dmg", external: true },
+      { os: "windows", label: "Windows", url: "https://github.com/srikanthpullela/hush-app/releases/latest/download/Hush-windows-setup.exe", file: "Hush-Setup.exe", external: true }
     ]
   }
 ];
