@@ -49,6 +49,54 @@ const PRODUCTS = [
     ]
   },
   {
+    slug: "apex-debug-studio",
+    name: "Apex Debug Studio",
+    category: "desktop",
+    tagline: "Live Apex debugging with direct org data access",
+    description: "A desktop Salesforce developer studio that lets you connect directly to DXR and Customer ARC environments, pull live org data, and debug Apex flows in real time. It combines a Monaco-based editor with breakpoints, variable inspection, SOQL tooling, and execution replay so teams can debug production-like behavior without context switching.",
+    tags: ["Salesforce", "Apex", "DXR", "Customer ARC", "Live Data", "Desktop"],
+    downloadSeed: 118,
+    githubRepo: "srikanthpullela/SplecNote",
+    icon: "🧪",
+    image: "assets/thumb-apex-debug-studio.png",
+    storeLabel: "View Apex Debug Studio",
+    link: "https://github.com/srikanthpullela/SplecNote/tree/main",
+    downloads: [
+      {
+        os: "mac",
+        label: "Mac (Apple Silicon DMG)",
+        url: "https://github.com/srikanthpullela/SplecNote/releases/latest/download/Apex.Debug.Studio-1.0.0-arm64.dmg",
+        external: true
+      },
+      {
+        os: "windows",
+        label: "Windows (Setup EXE)",
+        url: "https://github.com/srikanthpullela/SplecNote/releases/latest/download/Apex.Debug.Studio.Setup.1.0.0.exe",
+        external: true
+      }
+    ],
+    features: [
+      { icon: "🔌", title: "Direct DXR / Customer ARC Connectivity", desc: "Connect straight to your Salesforce environments using your authenticated tooling session so you can work on real org behavior instead of mock payloads." },
+      { icon: "📡", title: "Live Data Debugging", desc: "Pull live records, inspect runtime state, and step through Apex execution with true environment data to reproduce bugs faster and with higher confidence." },
+      { icon: "🧭", title: "Chrome DevTools-style Debug Experience", desc: "Use breakpoints, step in/over/out controls, scoped variable panels, and timeline-style execution views inspired by Chrome V8 workflows." },
+      { icon: "🧠", title: "Apex-aware Code Intelligence", desc: "Write and review Apex in a modern Monaco editor with syntax highlighting, search, command palette actions, and productivity shortcuts built for daily debugging." },
+      { icon: "🗂️", title: "Session Persistence & Auto-save", desc: "Keep all tabs, cursor positions, and unsaved work intact between restarts with automatic persistence, so investigations can continue exactly where they stopped." },
+      { icon: "🛡️", title: "Developer-focused Workflow", desc: "Everything is designed around Salesforce troubleshooting: query quickly, inspect org data, run diagnostics, and resolve incidents without bouncing between multiple tools." }
+    ],
+    screenshots: [
+      {
+        image: "assets/thumb-apex-debug-studio.png",
+        alt: "Apex Debug Studio editor with Salesforce tooling",
+        caption: "Main editor and developer workspace for live Apex investigations."
+      },
+      {
+        image: "assets/apex-debug-studio-logo.png",
+        alt: "Apex Debug Studio branding preview",
+        caption: "Apex Debug Studio product branding and app identity."
+      }
+    ]
+  },
+  {
     slug: "salesforce-toolkit",
     name: "Advanced Salesforce Developer Toolkit",
     category: "extension",

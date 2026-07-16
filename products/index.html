@@ -11,6 +11,11 @@
   <meta property="og:title" id="ogTitle" content="Product — Splec Developers" />
   <meta property="og:description" id="ogDesc" content="A product by Splec Developers." />
   <meta name="theme-color" content="#06070d" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -196,6 +201,45 @@
     }
     .feature-desc { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
 
+    /* ── Screenshot gallery ── */
+    .screenshots-section {
+      padding: 0 5vw 96px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .screenshots-section h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      margin-bottom: 28px;
+      color: var(--text);
+    }
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .screenshot-card {
+      margin: 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .screenshot-card img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #05060c;
+    }
+    .screenshot-card figcaption {
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--text-dim);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
     /* ── Footer strip ── */
     .product-footer {
       border-top: 1px solid rgba(255,255,255,0.06);
@@ -354,6 +398,19 @@
           </section>`
         : '';
 
+      const screenshotsHTML = (p.screenshots && p.screenshots.length)
+        ? `<section class="screenshots-section">
+            <h2>Screenshots</h2>
+            <div class="screenshots-grid">
+              ${p.screenshots.map(s => `
+                <figure class="screenshot-card">
+                  <img src="../${s.image}" alt="${s.alt || `${p.name} screenshot`}" loading="lazy" />
+                  ${s.caption ? `<figcaption>${s.caption}</figcaption>` : ''}
+                </figure>`).join('')}
+            </div>
+          </section>`
+        : '';
+
       // Thumb
       const thumbHTML = p.image
         ? `<img src="../${p.image}" alt="${p.name} preview" />`
@@ -380,6 +437,7 @@
           <div class="product-hero-right">${thumbHTML}</div>
         </div>
         ${featuresHTML}
+        ${screenshotsHTML}
         <footer class="product-footer">
           <span class="brand">Splec</span>
           <p>Built with care by <a href="/" style="color:var(--accent-2)">Splec Developers</a></p>
