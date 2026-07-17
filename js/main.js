@@ -98,18 +98,22 @@
             : `<span class="card-dl disabled">${osIcon(d.os)}${d.label}</span>`
         )
         .join("");
-      const learnMore = p.slug ? `<a class="card-link" href="/products/?p=${p.slug}" style="margin-bottom:8px">Learn more ${arrowSVG}</a>` : "";
+      const learnMore = p.slug ? `<a class="card-link" href="${p.page || `/products/?p=${p.slug}`}" style="margin-bottom:8px">Learn more ${arrowSVG}</a>` : "";
       return learnMore + `<div class="card-downloads">${btns}</div>`;
     }
     if (p.comingSoon) {
-      const learnMore = p.slug ? `<a class="card-link" href="/products/?p=${p.slug}">Learn more ${arrowSVG}</a>` : "";
+      const learnMore = p.slug ? `<a class="card-link" href="${p.page || `/products/?p=${p.slug}`}">Learn more ${arrowSVG}</a>` : "";
       return learnMore || `<a class="card-link" href="${p.link || "#"}" target="_blank" rel="noopener">Preview ${arrowSVG}</a>`;
     }
-    const learnMore = p.slug ? `<a class="card-link" href="/products/?p=${p.slug}">Learn more ${arrowSVG}</a>` : "";
+    const learnMore = p.slug ? `<a class="card-link" href="${p.page || `/products/?p=${p.slug}`}">Learn more ${arrowSVG}</a>` : "";
     const external = p.link && p.link !== "#"
       ? `<a class="card-link secondary" href="${p.link}" target="_blank" rel="noopener" style="opacity:.65;font-size:13px;margin-left:4px">${p.category === "extension" ? "Chrome Store ↗" : p.category === "ios" ? "App Store ↗" : "Visit ↗"}</a>`
       : "";
     return learnMore + external;
+  }
+
+  function productUrl(p) {
+    return p.page || `/products/?p=${p.slug}`;
   }
 
   function renderProducts(list) {
@@ -140,7 +144,7 @@
         card.style.cursor = "pointer";
         card.addEventListener("click", (e) => {
           if (!e.target.closest("a")) {
-            window.location.href = `/products/?p=${p.slug}`;
+            window.location.href = productUrl(p);
           }
         });
       }

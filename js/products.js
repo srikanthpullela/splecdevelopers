@@ -50,6 +50,7 @@ const PRODUCTS = [
   },
   {
     slug: "apex-debug-studio",
+    page: "/products/apex-debug-studio/",
     name: "Apex Debug Studio",
     category: "desktop",
     tagline: "Live Apex debugging with direct org data access",

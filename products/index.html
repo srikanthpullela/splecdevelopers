@@ -814,8 +814,8 @@
       document.head.appendChild(ldScript);
 
       if (p.slug === 'apex-debug-studio') {
-        document.body.classList.add('apex-product-active');
-        renderApexPage(p, cat);
+        // This product has its own dedicated page
+        window.location.replace('/products/apex-debug-studio/');
         return;
       }
 
