@@ -10,6 +10,13 @@
   <meta property="og:site_name" content="Splec Developers" />
   <meta property="og:title" id="ogTitle" content="Product — Splec Developers" />
   <meta property="og:description" id="ogDesc" content="A product by Splec Developers." />
+  <meta property="og:image" id="ogImage" content="https://splecdevelopers.com/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="twTitle" content="Product — Splec Developers" />
+  <meta name="twitter:description" id="twDesc" content="A product by Splec Developers." />
+  <meta name="twitter:image" id="twImage" content="https://splecdevelopers.com/assets/og-cover.png" />
   <meta name="theme-color" content="#06070d" />
   <link rel="icon" href="../assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
@@ -792,6 +799,13 @@
       document.getElementById('pageDesc').setAttribute('content', p.tagline ? `${p.tagline}. ${p.description}` : p.description);
       document.getElementById('ogTitle').setAttribute('content', `${p.name} — Splec Developers`);
       document.getElementById('ogDesc').setAttribute('content', p.tagline || p.description);
+      document.getElementById('twTitle').setAttribute('content', `${p.name} — Splec Developers`);
+      document.getElementById('twDesc').setAttribute('content', p.tagline || p.description);
+      if (p.image && !p.image.endsWith('.svg')) {
+        const absImage = `https://splecdevelopers.com/${p.image}`;
+        document.getElementById('ogImage').setAttribute('content', absImage);
+        document.getElementById('twImage').setAttribute('content', absImage);
+      }
       document.getElementById('pageCanonical').setAttribute('href', `https://splecdevelopers.com/products/?p=${p.slug}`);
 
       // Inject JSON-LD structured data for Google
