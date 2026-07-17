@@ -53,8 +53,8 @@ const PRODUCTS = [
     name: "Apex Debug Studio",
     category: "desktop",
     tagline: "Live Apex debugging with direct org data access",
-    description: "A desktop Salesforce developer studio that lets you connect directly to DXR and Customer ARC environments, pull live org data, and debug Apex flows in real time. It combines a Monaco-based editor with breakpoints, variable inspection, SOQL tooling, and execution replay so teams can debug production-like behavior without context switching.",
-    tags: ["Salesforce", "Apex", "DXR", "Customer ARC", "Live Data", "Desktop"],
+    description: "A desktop Salesforce developer studio that lets you connect directly to DX Org and Customer Orgs, pull live org data, and debug Apex flows in real time. It combines a Monaco-based editor with breakpoints, variable inspection, SOQL tooling, and execution replay so teams can debug production-like behavior without context switching.",
+    tags: ["Salesforce", "Apex", "DX Org", "Customer Orgs", "Live Data", "Desktop"],
     downloadSeed: 118,
     githubRepo: "srikanthpullela/SplecNote",
     icon: "🧪",
@@ -76,7 +76,7 @@ const PRODUCTS = [
       }
     ],
     features: [
-      { icon: "🔌", title: "Direct DXR / Customer ARC Connectivity", desc: "Connect straight to your Salesforce environments using your authenticated tooling session so you can work on real org behavior instead of mock payloads." },
+      { icon: "🔌", title: "Direct DX Org / Customer Orgs Connectivity", desc: "Connect straight to your Salesforce environments using your authenticated tooling session so you can work on real org behavior instead of mock payloads." },
       { icon: "📡", title: "Live Data Debugging", desc: "Pull live records, inspect runtime state, and step through Apex execution with true environment data to reproduce bugs faster and with higher confidence." },
       { icon: "🧭", title: "Chrome DevTools-style Debug Experience", desc: "Use breakpoints, step in/over/out controls, scoped variable panels, and timeline-style execution views inspired by Chrome V8 workflows." },
       { icon: "🧠", title: "Apex-aware Code Intelligence", desc: "Write and review Apex in a modern Monaco editor with syntax highlighting, search, command palette actions, and productivity shortcuts built for daily debugging." },
@@ -85,14 +85,24 @@ const PRODUCTS = [
     ],
     screenshots: [
       {
-        image: "assets/thumb-apex-debug-studio.png",
+        image: "assets/apex-debug-studio-live-debug.png",
         alt: "Apex Debug Studio editor with Salesforce tooling",
-        caption: "Main editor and developer workspace for live Apex investigations."
+        caption: "Live debugging workspace with modern welcome flow and quick command access."
+      },
+      {
+        image: "assets/apex-debug-studio-org-connector.png",
+        alt: "Apex Debug Studio org connector modal",
+        caption: "Org connector command palette for Production, Sandbox, and custom domain Salesforce orgs."
+      },
+      {
+        image: "assets/thumb-apex-debug-studio.png",
+        alt: "Apex Debug Studio UI preview",
+        caption: "Product UI preview of Apex Debug Studio in action."
       },
       {
         image: "assets/apex-debug-studio-logo.png",
-        alt: "Apex Debug Studio branding preview",
-        caption: "Apex Debug Studio product branding and app identity."
+        alt: "Apex Debug Studio branding mark",
+        caption: "Apex Debug Studio app identity and logo."
       }
     ]
   },
