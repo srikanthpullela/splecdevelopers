@@ -242,293 +242,301 @@
 
     /* ── Apex Debug Studio special page ── */
     .apex-page {
-      max-width: 1220px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 108px 5vw 88px;
+      padding: 128px 6vw 124px;
+      display: flex;
+      flex-direction: column;
+      gap: 88px;
       position: relative;
     }
     .apex-page::before {
       content: "";
       position: absolute;
-      inset: 42px 3vw auto;
-      height: 360px;
-      border-radius: 48px;
-      background: radial-gradient(circle at 22% 22%, rgba(82, 168, 255, 0.2), transparent 56%),
-                  radial-gradient(circle at 80% 18%, rgba(255, 75, 160, 0.22), transparent 58%);
+      inset: 56px 4vw auto;
+      height: 420px;
+      border-radius: 56px;
+      background: radial-gradient(circle at 24% 25%, rgba(72, 186, 255, 0.18), transparent 55%),
+                  radial-gradient(circle at 78% 20%, rgba(255, 86, 172, 0.2), transparent 56%),
+                  radial-gradient(circle at 58% 72%, rgba(123, 121, 255, 0.16), transparent 54%);
       filter: blur(18px);
       z-index: -1;
     }
-    .apex-grid {
+    .apex-hero {
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 28px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 46px;
       align-items: stretch;
-    }
-    .apex-panel {
+      padding: 56px;
+      border-radius: 30px;
       border: 1px solid rgba(255,255,255,0.14);
-      background: linear-gradient(160deg, rgba(11,18,34,0.92), rgba(8,12,24,0.88));
-      border-radius: 22px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.38);
-      backdrop-filter: blur(12px);
+      background: linear-gradient(165deg, rgba(11, 16, 34, 0.96), rgba(8, 12, 26, 0.92));
+      box-shadow: 0 32px 96px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(10px);
     }
-    .apex-hero-copy {
-      padding: 34px 34px 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .apex-eyebrow {
+    .apex-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: 999px;
+      gap: 9px;
       width: fit-content;
-      border: 1px solid rgba(95,196,255,0.35);
-      background: rgba(16,34,57,0.7);
-      color: #9ddfff;
+      padding: 7px 13px;
+      border-radius: 999px;
       font-size: 11px;
-      letter-spacing: 0.08em;
       text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9edfff;
+      border: 1px solid rgba(126, 211, 255, 0.4);
+      background: rgba(15, 41, 69, 0.62);
+      margin-bottom: 22px;
       font-weight: 600;
-      margin-bottom: 18px;
     }
     .apex-title {
+      margin: 0 0 18px;
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(34px, 4.8vw, 62px);
-      line-height: 1.02;
-      letter-spacing: -0.02em;
-      margin: 0 0 14px;
-      color: #eff6ff;
+      font-size: clamp(40px, 5vw, 68px);
+      line-height: 1.03;
+      letter-spacing: -0.025em;
+      color: #f2f8ff;
       text-wrap: balance;
     }
     .apex-title span {
-      background: linear-gradient(90deg, #62d8ff 0%, #8ab5ff 42%, #ff6ea8 100%);
+      display: block;
+      margin-top: 6px;
+      background: linear-gradient(90deg, #61d8ff 0%, #8b9fff 45%, #ff67ab 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     .apex-desc {
-      font-size: 16px;
-      line-height: 1.8;
-      color: rgba(225,236,255,0.78);
-      margin: 0 0 20px;
+      margin: 0 0 24px;
+      font-size: 17px;
+      line-height: 1.9;
       max-width: 61ch;
+      color: rgba(220, 234, 255, 0.82);
     }
     .apex-org-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
+      gap: 10px;
+      margin-bottom: 32px;
     }
     .apex-org-tags span {
       font-size: 12px;
-      padding: 6px 11px;
+      padding: 7px 13px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.17);
-      color: rgba(230,240,255,0.9);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(232,242,255,0.92);
       background: rgba(255,255,255,0.04);
     }
-    .apex-pulse {
-      position: relative;
-      height: 8px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.07);
-      overflow: hidden;
-      margin-bottom: 20px;
+    .apex-cta {
+      margin-bottom: 34px;
     }
-    .apex-pulse::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, #5fd2ff, #7f95ff, #ff4f96);
-      width: 42%;
-      animation: apexPulse 2.4s linear infinite;
-      border-radius: inherit;
+    .apex-cta .dl-group {
+      gap: 14px;
+      margin-bottom: 0;
     }
-    @keyframes apexPulse {
-      0% { transform: translateX(-120%); }
-      100% { transform: translateX(290%); }
+    .apex-cta .dl-btn {
+      padding: 13px 24px;
+      border-color: rgba(104, 197, 255, 0.52);
+      background: linear-gradient(122deg, rgba(33,59,91,0.92), rgba(49,33,104,0.85));
+      color: #edf7ff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+      font-weight: 600;
     }
-    .apex-kpis {
+    .apex-meta {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin: 0 0 20px;
+      gap: 12px;
+      margin-top: 12px;
     }
     .apex-kpi {
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.03);
-      padding: 12px;
+      padding: 14px 14px 13px;
     }
     .apex-kpi strong {
       display: block;
-      font-size: 19px;
-      color: #edf7ff;
+      margin-bottom: 5px;
+      font-size: 20px;
+      line-height: 1.06;
+      color: #eef7ff;
       font-family: "Space Grotesk", sans-serif;
-      margin-bottom: 4px;
-      line-height: 1;
     }
     .apex-kpi span {
       font-size: 12px;
-      color: rgba(205,221,245,0.75);
+      line-height: 1.5;
+      color: rgba(207,223,248,0.77);
     }
-    .apex-cta .dl-group {
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .apex-cta .dl-btn {
-      border-color: rgba(98, 186, 255, 0.45);
-      background: linear-gradient(120deg, rgba(37,62,95,0.92), rgba(38,37,91,0.88));
-      color: #edf6ff;
-      font-weight: 600;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.17);
-    }
-    .apex-cta .btn-store-ghost {
-      border-color: rgba(255,255,255,0.24);
-      color: rgba(226,238,255,0.9);
-    }
-    .apex-visual {
+    .apex-stage {
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(168deg, rgba(9,15,29,0.88), rgba(6,11,22,0.85));
+      padding: 18px;
       position: relative;
       overflow: hidden;
-      min-height: 100%;
-      padding: 18px;
-      perspective: 900px;
+      box-shadow: 0 24px 70px rgba(5, 8, 20, 0.52);
     }
-    .apex-visual-main {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(120,180,255,0.32);
-      box-shadow: 0 24px 80px rgba(5,10,22,0.55);
-      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-      transition: transform 0.15s ease-out;
-      transform-style: preserve-3d;
-    }
-    .apex-visual-main img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .apex-floating {
+    .apex-stage::after {
+      content: "";
       position: absolute;
-      right: 24px;
-      top: 24px;
-      min-width: 210px;
+      inset: -120% 18% auto -40%;
+      height: 240%;
+      background: linear-gradient(90deg, transparent, rgba(111, 216, 255, 0.12), transparent);
+      transform: rotate(14deg);
+      animation: apexSweep 6.5s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes apexSweep {
+      0% { transform: translateX(-40%) rotate(14deg); }
+      100% { transform: translateX(72%) rotate(14deg); }
+    }
+    .apex-stage-main {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(112,189,255,0.35);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.45);
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+      transition: transform 0.14s ease-out;
+      transform-style: preserve-3d;
+      background: #0a1325;
+    }
+    .apex-stage-main img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .apex-debug-widget {
+      margin-top: 15px;
       border-radius: 13px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(7,14,30,0.78);
-      backdrop-filter: blur(8px);
-      padding: 10px 12px;
-      box-shadow: 0 14px 38px rgba(0,0,0,0.45);
-      animation: floatCard 5.4s ease-in-out infinite;
-    }
-    .apex-floating h4 {
-      margin: 0 0 8px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(8,14,28,0.83);
+      padding: 12px 13px;
       font-size: 12px;
-      letter-spacing: 0.05em;
+      color: rgba(215,230,252,0.88);
+      line-height: 1.55;
+    }
+    .apex-debug-widget strong {
+      display: block;
+      color: #9fe2ff;
+      font-size: 11px;
       text-transform: uppercase;
-      color: #8fc8ff;
+      letter-spacing: 0.08em;
+      margin-bottom: 7px;
     }
-    .apex-floating p {
+    .apex-flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .apex-flow-card {
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(160deg, rgba(11,18,34,0.84), rgba(8,14,26,0.74));
+      padding: 22px 22px 20px;
+      transition: transform .24s ease, border-color .24s ease;
+    }
+    .apex-flow-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(120, 201, 255, 0.44);
+    }
+    .apex-flow-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-bottom: 14px;
+      background: rgba(93,173,255,0.2);
+      border: 1px solid rgba(132,208,255,0.4);
+      color: #9edfff;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .apex-flow-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #edf6ff;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .apex-flow-card p {
       margin: 0;
-      font-size: 13px;
-      color: rgba(231,238,255,0.82);
-      line-height: 1.5;
-    }
-    .apex-floating.apex-floating-secondary {
-      top: auto;
-      bottom: 24px;
-      left: 24px;
-      right: auto;
-      animation-delay: 0.9s;
-    }
-    @keyframes floatCard {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-    .apex-features {
-      margin-top: 28px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(210,226,249,0.82);
     }
     .apex-section-title {
-      margin: 0 0 18px;
+      margin: 0 0 26px;
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(24px, 3vw, 36px);
-      color: #edf5ff;
+      font-size: clamp(26px, 3.1vw, 40px);
+      color: #edf6ff;
+      letter-spacing: -0.01em;
     }
     .apex-feature-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
     }
     .apex-feature {
-      border-radius: 14px;
+      border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.1);
-      background: linear-gradient(150deg, rgba(10,19,34,0.84), rgba(7,12,26,0.72));
-      padding: 16px;
-      transition: transform .22s ease, border-color .22s ease;
-      transform: translateZ(0);
+      background: linear-gradient(156deg, rgba(11,19,35,0.84), rgba(7,13,24,0.74));
+      padding: 24px;
+      transition: transform .24s ease, border-color .24s ease;
     }
     .apex-feature:hover {
-      transform: translateY(-5px);
-      border-color: rgba(114,192,255,0.45);
+      transform: translateY(-4px);
+      border-color: rgba(120, 201, 255, 0.42);
+    }
+    .apex-feature .feature-icon {
+      margin: 0 0 12px;
+      font-size: 25px;
     }
     .apex-feature h3 {
-      margin: 9px 0 7px;
-      font-size: 15px;
-      color: #e9f3ff;
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #ebf5ff;
       font-family: "Space Grotesk", sans-serif;
     }
     .apex-feature p {
       margin: 0;
-      font-size: 13px;
-      color: rgba(214,228,250,0.82);
-      line-height: 1.62;
+      font-size: 14px;
+      line-height: 1.76;
+      color: rgba(211,227,250,0.82);
     }
-    .apex-feature .feature-icon {
-      margin: 0;
-      font-size: 23px;
-    }
-    .apex-shots {
-      margin-top: 24px;
-    }
-    .apex-shot-grid {
+    .apex-gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      gap: 20px;
     }
     .apex-shot {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
+      border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.13);
-      background: #050916;
+      overflow: hidden;
+      background: #060b18;
       transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-      transition: transform 0.15s ease-out, border-color 0.2s;
+      transition: transform 0.14s ease-out, border-color 0.2s;
     }
-    .apex-shot:hover { border-color: rgba(114,192,255,0.47); }
+    .apex-shot.apex-shot--hero {
+      grid-column: span 2;
+    }
+    .apex-shot:hover { border-color: rgba(118, 199, 255, 0.46); }
     .apex-shot img {
       width: 100%;
-      height: 255px;
-      object-fit: cover;
       display: block;
-      transition: transform .45s ease;
+      object-fit: cover;
+      max-height: 460px;
     }
-    .apex-shot:hover img { transform: scale(1.03); }
-    .apex-shot .apex-shot-caption {
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      border-radius: 10px;
-      padding: 8px 10px;
-      font-size: 12px;
-      color: #eef6ff;
-      background: rgba(7,14,29,0.72);
-      border: 1px solid rgba(255,255,255,0.17);
-      backdrop-filter: blur(7px);
-      line-height: 1.4;
+    .apex-shot figcaption {
+      padding: 12px 14px;
+      font-size: 13px;
+      color: rgba(225,237,255,0.86);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      line-height: 1.6;
+      background: rgba(7,14,29,0.68);
     }
 
     /* ── Footer strip ── */
@@ -565,13 +573,16 @@
       .product-hero { flex-direction: column; padding-top: 100px; gap: 40px; }
       .product-hero-right { display: none; }
       .product-footer { justify-content: center; text-align: center; }
-      .apex-page { padding-top: 94px; }
-      .apex-grid { grid-template-columns: 1fr; }
-      .apex-kpis { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .apex-page { padding: 96px 5vw 92px; gap: 58px; }
+      .apex-hero { grid-template-columns: 1fr; gap: 28px; padding: 26px; }
+      .apex-title { font-size: clamp(32px, 11vw, 50px); }
+      .apex-desc { font-size: 15px; }
+      .apex-meta { grid-template-columns: 1fr; }
+      .apex-flow { grid-template-columns: 1fr; }
       .apex-feature-grid { grid-template-columns: 1fr; }
-      .apex-shot-grid { grid-template-columns: 1fr; }
-      .apex-visual-main img, .apex-shot img { height: auto; }
-      .apex-floating { position: static; margin-top: 12px; }
+      .apex-gallery-grid { grid-template-columns: 1fr; }
+      .apex-shot.apex-shot--hero { grid-column: span 1; }
+      .apex-shot img { max-height: unset; height: auto; }
     }
   </style>
 </head>
@@ -672,7 +683,7 @@
     function renderApexPage(p, cat) {
       const shots = (p.screenshots || []).slice(0, 4);
       const heroImage = shots[0]?.image || p.image;
-      const spotlightImage = shots[1]?.image || p.image;
+      const galleryShots = shots.length ? shots : (p.image ? [{ image: p.image, caption: `${p.name} preview` }] : []);
       const ctaHTML = buildCtaHTML(p);
 
       document.getElementById('main').innerHTML = `
@@ -681,47 +692,61 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
             All products
           </a>
-          <section class="apex-grid">
-            <article class="apex-panel apex-hero-copy">
-              <div>
-                <span class="apex-eyebrow">Live Apex Debugging Studio</span>
-                <h1 class="apex-title">${p.name} <span>for real org workflows</span></h1>
-                <p class="apex-desc">${p.description || ''}</p>
-                <div class="apex-org-tags">
-                  <span>DX Org</span>
-                  <span>Customer Orgs</span>
-                  <span>Sandbox Org</span>
-                  <span>Live Record Context</span>
-                </div>
-                <div class="apex-pulse" aria-hidden="true"></div>
-                <div class="apex-kpis">
-                  <div class="apex-kpi"><strong>${cat[p.category] || 'Product'}</strong><span>Built for Salesforce developers</span></div>
-                  <div class="apex-kpi"><strong>${fmtCount(p.downloadSeed || 0)}</strong><span id="page-dl-count">downloads</span></div>
-                  <div class="apex-kpi"><strong>V8-style</strong><span>step-through debugging flow</span></div>
-                </div>
+          <section class="apex-hero">
+            <article>
+              <span class="apex-badge">Live Apex Debugging Studio</span>
+              <h1 class="apex-title">${p.name}<span>debug live org behavior, not mock data</span></h1>
+              <p class="apex-desc">${p.description || ''}</p>
+              <div class="apex-org-tags">
+                <span>DX Org</span>
+                <span>Customer Orgs</span>
+                <span>Sandbox Org</span>
+                <span>Command Palette Workflow</span>
               </div>
               <div class="product-cta-group apex-cta">
                 ${ctaHTML}
                 <a class="btn-store-ghost" href="/#products">← See all products</a>
               </div>
+              <div class="apex-meta">
+                <div class="apex-kpi"><strong>${cat[p.category] || 'Desktop App'}</strong><span>Purpose-built for Salesforce engineering teams</span></div>
+                <div class="apex-kpi"><strong id="page-dl-count">⬇ ${fmtCount(p.downloadSeed || 0)}</strong><span>Total downloads</span></div>
+                <div class="apex-kpi"><strong>V8-style Flow</strong><span>Breakpoints, stepping, variable scopes, and replay</span></div>
+              </div>
             </article>
 
-            <article class="apex-panel apex-visual">
-              <figure class="apex-visual-main" data-apex-tilt>
+            <article class="apex-stage">
+              <figure class="apex-stage-main" data-apex-tilt>
                 ${heroImage ? `<img src="../${heroImage}" alt="${p.name} live debug preview" />` : ''}
               </figure>
-              <div class="apex-floating">
-                <h4>Live Debug Session</h4>
-                <p>Connect to DX Org or Customer Orgs, pull execution context, and inspect variables while stepping through Apex in real time.</p>
-              </div>
-              <div class="apex-floating apex-floating-secondary">
-                <h4>Org Connector</h4>
-                <p>Production, Sandbox, and custom domain authentication in a single command palette flow.</p>
+              <div class="apex-debug-widget">
+                <strong>Live Debug Session</strong>
+                Connected to DX Org and Customer Orgs. Pulling transaction frames, watching scoped variables, and replaying execution with live record context.
               </div>
             </article>
           </section>
 
-          <section class="apex-features">
+          <section>
+            <h2 class="apex-section-title">Debugging workflow without context switching</h2>
+            <div class="apex-flow">
+              <article class="apex-flow-card">
+                <span class="apex-flow-step">1</span>
+                <h3>Connect Orgs Fast</h3>
+                <p>Jump into Production, Sandbox, DX Org, or custom domain orgs from one command-driven connector.</p>
+              </article>
+              <article class="apex-flow-card">
+                <span class="apex-flow-step">2</span>
+                <h3>Inspect Live Execution</h3>
+                <p>Set breakpoints, step through Apex, inspect local scope, and validate runtime state with live data.</p>
+              </article>
+              <article class="apex-flow-card">
+                <span class="apex-flow-step">3</span>
+                <h3>Resolve and Replay</h3>
+                <p>Run SOQL, replay execution paths, and verify fixes in the same workspace without tool hopping.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
             <h2 class="apex-section-title">Why teams pick Apex Debug Studio</h2>
             <div class="apex-feature-grid">
               ${(p.features || []).map(f => `
@@ -733,14 +758,14 @@
             </div>
           </section>
 
-          ${(shots.length)
-            ? `<section class="apex-shots">
-                <h2 class="apex-section-title">Interactive product walkthrough</h2>
-                <div class="apex-shot-grid">
-                  ${shots.map((s, i) => `
-                    <figure class="apex-shot" data-apex-tilt>
-                      <img src="../${i === 1 && spotlightImage ? spotlightImage : s.image}" alt="${s.alt || `${p.name} screenshot`}" loading="lazy" />
-                      <figcaption class="apex-shot-caption">${s.caption || 'Apex Debug Studio screenshot'}</figcaption>
+          ${(galleryShots.length)
+            ? `<section>
+                <h2 class="apex-section-title">Product walkthrough</h2>
+                <div class="apex-gallery-grid">
+                  ${galleryShots.map((s, i) => `
+                    <figure class="apex-shot ${i === 0 ? 'apex-shot--hero' : ''}" data-apex-tilt>
+                      <img src="../${s.image}" alt="${s.alt || `${p.name} screenshot`}" loading="lazy" />
+                      <figcaption>${s.caption || 'Apex Debug Studio screenshot'}</figcaption>
                     </figure>`).join('')}
                 </div>
               </section>`
