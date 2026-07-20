@@ -66,13 +66,13 @@ const PRODUCTS = [
       {
         os: "mac",
         label: "Mac (Apple Silicon DMG)",
-        url: "https://github.com/srikanthpullela/Apex-Debug-Studio/releases/latest/download/Apex.Debug.Studio-1.0.0-arm64.dmg",
+        url: "https://github.com/srikanthpullela/Apex-Debug-Studio/releases/download/v1.0.0/Apex-Debug-Studio-mac.dmg",
         external: true
       },
       {
         os: "windows",
         label: "Windows (Setup EXE)",
-        url: "https://github.com/srikanthpullela/Apex-Debug-Studio/releases/latest/download/Apex.Debug.Studio.Setup.1.0.0.exe",
+        url: "https://github.com/srikanthpullela/Apex-Debug-Studio/releases/download/v1.0.0/Apex-Debug-Studio-Setup.exe",
         external: true
       }
     ],
