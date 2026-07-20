@@ -57,22 +57,22 @@ const PRODUCTS = [
     description: "A desktop Salesforce developer studio that lets you connect directly to DX Org and Customer Orgs, pull live org data, and debug Apex flows in real time. It combines a Monaco-based editor with breakpoints, variable inspection, SOQL tooling, and execution replay so teams can debug production-like behavior without context switching.",
     tags: ["Salesforce", "Apex", "DX Org", "Customer Orgs", "Live Data", "Desktop"],
     downloadSeed: 118,
-    githubRepo: "srikanthpullela/SplecNote",
+    githubRepo: "srikanthpullela/Apex-Debug-Studio",
     icon: "🧪",
     image: "assets/thumb-apex-debug-studio.png",
     storeLabel: "View Apex Debug Studio",
-    link: "https://github.com/srikanthpullela/SplecNote/tree/main",
+    link: "https://github.com/srikanthpullela/Apex-Debug-Studio/tree/main",
     downloads: [
       {
         os: "mac",
         label: "Mac (Apple Silicon DMG)",
-        url: "https://github.com/srikanthpullela/SplecNote/releases/latest/download/Apex.Debug.Studio-1.0.0-arm64.dmg",
+        url: "https://github.com/srikanthpullela/Apex-Debug-Studio/releases/latest/download/Apex.Debug.Studio-1.0.0-arm64.dmg",
         external: true
       },
       {
         os: "windows",
         label: "Windows (Setup EXE)",
-        url: "https://github.com/srikanthpullela/SplecNote/releases/latest/download/Apex.Debug.Studio.Setup.1.0.0.exe",
+        url: "https://github.com/srikanthpullela/Apex-Debug-Studio/releases/latest/download/Apex.Debug.Studio.Setup.1.0.0.exe",
         external: true
       }
     ],
